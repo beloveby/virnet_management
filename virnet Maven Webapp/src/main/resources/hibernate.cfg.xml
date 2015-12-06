@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+           "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+           "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">  
+<hibernate-configuration>  
+	<session-factory>  
+	
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="connection.url">jdbc:mysql://202.112.113.133:3306/virnet?Unicode=true&amp;characterEncoding=UTF-8</property>
+		<property name="connection.username">virnetdb</property>
+		<property name="connection.password">virnetdb</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="myeclipse.connection.profile">virnet</property>
+	
+		<property name="connection.autoReconnect">true</property>
+        <property name="connection.autoReconnectForPools">true</property>
+        <property name="connection.is-connection-validation-required">true</property>
+		
+		<property name="hibernate.show_sql">false</property>  
+        <property name="hibernate.format_sql">true</property>  
+  
+        <property name="hibernate.hbm2ddl.auto">none</property>  
+  
+        <property name="hibernate.jdbc.fetch_size">100</property>  
+        <property name="hibernate.jdbc.batch_size">30</property>     
+        
+   		<mapping resource="virnet/management/entity/Power.hbm.xml" />
+   		<mapping resource="virnet/management/entity/Character.hbm.xml" />
+        <mapping resource="virnet/management/entity/CharacterPower.hbm.xml" />
+        <mapping resource="virnet/management/entity/Rucstu.hbm.xml" />
+        <mapping resource="virnet/management/entity/User.hbm.xml" />
+        <mapping resource="virnet/management/entity/UserCharacter.hbm.xml" />
+        <mapping resource="virnet/management/entity/Exp.hbm.xml" />
+        <mapping resource="virnet/management/entity/Course.hbm.xml" />
+        <mapping resource="virnet/management/entity/Class.hbm.xml" />
+        <mapping resource="virnet/management/entity/Classarrange.hbm.xml" />
+        <mapping resource="virnet/management/entity/ClassarrangeCase.hbm.xml" />
+        <mapping resource="virnet/management/entity/Periodarrange.hbm.xml" />
+        <mapping resource="virnet/management/entity/Semester.hbm.xml" />
+        <mapping resource="virnet/management/entity/PeriodarrangeWeek.hbm.xml" />
+        <mapping resource="virnet/management/entity/ClassTeacher.hbm.xml" />
+        <mapping resource="virnet/management/entity/Classgroup.hbm.xml" />
+        <mapping resource="virnet/management/entity/Groupmember.hbm.xml" />
+        <mapping resource="virnet/management/entity/StuClass.hbm.xml" />
+        <mapping resource="virnet/management/entity/Courseexp.hbm.xml" />
+	</session-factory>  
+</hibernate-configuration>  

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	
+	<package name="virnet" namespace="/" extends="struts-default,json-default">
+	    
+	    <action name="login" class="log" method="login">
+	        <result name="success" type="redirect">virnet/virnet.jsp</result>
+	        <result name="error" type="redirect">log/login.jsp</result>
+	    </action>
+	    
+	    <action name="loadInfo" class="information" method="loadInfo">
+	        <result name="success" type="json">
+	            <param name="root">results</param>
+	        </result>
+	        <result name="login">log/login.jsp</result>
+	    </action>
+	    
+	    <action name="showDetail" class="information" method="showDetail">
+	        <result name="success" type="json">
+	            <param name="root">detail</param>
+	        </result>
+	    </action>
+	    
+	    <action name="showTimeArrange" class="time" method="showTimeArrange">
+	        <result name="success" type="json">
+	            <param name="root">results</param>
+	        </result>
+	    </action>
+	    
+	    <action name="courseTableInfo" class="time" method="courseTableInfo">
+	        <result name="success" type="json">
+	            <param name="root">info</param>
+	        </result>
+	    </action>
+	    
+	    <action name="classInfo" class="time" method="classInfo">
+	        <result name="success" type="json">
+	            <param name="root">info</param>
+	        </result>
+	    </action>
+	    
+	    <action name="edit" class="information" method="edit">
+	        <result name="success" type="json">
+	            <param name="root">edit</param>
+	        </result>
+	    </action>
+	    
+	    <action name="submit" class="information" method="submit">
+	        <result name="success" type="json">
+	            <param name="root">submit</param>
+	        </result>
+	    </action>
+	    
+	    <action name="add" class="information" method="add">
+	        <result name="success" type="json">
+	            <param name="root">add</param>
+	        </result>
+	    </action>
+	    
+	</package>
+</struts>

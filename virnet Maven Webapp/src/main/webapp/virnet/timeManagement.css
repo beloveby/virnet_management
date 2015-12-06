@@ -1,0 +1,31 @@
+.course-table{
+	margin-top:30px;
+}
+
+.course-table td:hover{
+	
+}
+
+.courseTable-th{
+	text-align:center;
+}
+
+.courseTable-selected{
+	background-color: #ecf0f1;
+}
+
+#class-container > a{
+	margin-right: 20px;
+}
+
+.drop-active{
+	background-color:#ecf0f1;
+}
+
+.courseTable-btn{
+	margin:2px;
+}
+
+.selectTime{
+	background-color:#00ffff;
+}
